@@ -1,0 +1,11 @@
+<div class="container bgcls">
+  <div class="row">
+    <div class="col-md-12" *ngIf="message.message">
+        <h4>{{message.message}}</h4>
+        <h4>BookName : {{message.bname}}</h4>
+        <h4>AuthorName : {{message.aname}}</h4>
+        <h4>Quantity : {{message.quantity}}</h4>
+        <h4>Price : {{(message.quantity)*100}}</h4>
+    </div>
+  </div>
+</div>

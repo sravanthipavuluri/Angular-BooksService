@@ -1,0 +1,37 @@
+<div class="container bgcls">
+  <div class="row">
+    <div class="col-md12">       
+      <form class="form-horizontal" (ngSubmit)="onFormSubmit(BooksForm)" #BooksForm = "ngForm">
+        <div>
+          <table class="table table-stripped">
+            <tr>
+              <td>
+                  <input type="text" [ngModel]="bEntry.bookName" name="BName" #BName="ngModel" placeholder="Enter Book Name" minlength="5" maxlength="10" required> 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <input type="text" [ngModel]="bEntry.authorName" name="AName" #AName="ngModel" placeholder="Enter Author Name" maxlength="10" required>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  <input type="number" [ngModel]="bEntry.quantity" name="Qty" #Qty="ngModel" placeholder="Enter Quantity" maxlength="2" required>
+                  <!-- <input type="number" [ngModel]="Pricevalue" name="Price" #Price="ngModel" placeholder="Price"> -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- <p *ngIf="">Price:{{price}}</p> -->
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div ngModelGroup="submitsection">
+          <button type="submit" class="btn btn-success" [disabled]="!BooksForm.form.valid"> Submit </button>
+          <button type="reset" class="btn btn-default" (click)="clearData();">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
